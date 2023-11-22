@@ -1,0 +1,6 @@
+{% extends "home.html" %} {% block title %}Logout{% endblock %} {% block content
+%}
+{% if logged_in %}
+    <!-- Выводим кнопку Logout только если пользователь вошел в систему -->
+{% endif %}
+{% endblock %}

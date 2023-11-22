@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hair Dresser Website</title>
+
+<link rel="stylesheet" href="../static/style.css">
+    <style>
+
+
+        .alert {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+            font-family: Courier, monospace; /* Используем шрифт Roboto */
+        }
+
+        .alert-error {
+            color:  #8B0000; /* Цвет бордовый */
+        }
+
+        .alert-success {
+            color: #008080;
+        }
+
+    </style>
+</head>
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- header -->
+    <section class="header">
+
+        <a href="#" class="logo"> Hair dresser </a>
+
+        <nav class="navbar">
+           <div id="close-navbar" class="fas fa-times"></div>
+           <a href="http://127.0.0.1:5000/#home">home</a>
+           <a href="#about">about</a>
+           <a href="#blog">blogs</a>
+           <a href="/login">Login</a>
+           <a href="/registration">Registration</a>
+
+
+           <a href="#review">review</a>
+        </nav>
+
+        <div id="menu-btn" class="fas fa-bars"></div>
+
+     </section>
+<!-- header -->
+
+<!-- home -->
+
+
+<section class="home" id="home">
+
+    <div class="content">
+        <span>Welcome</span>
+        <h3 style="color: #fff;">We make <br> hair beautiful <br> & unique</h3>
+            <img src="../static/images/home-bg2.png" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+    </div>
+
+</section>
+<!-- home -->
+
+<!-- about us -->
+
+<section class="about" id="about">
+
+    <h1 class="heading">about us</h1>
+
+    <div class="row" >
+
+        <div class="image">
+            <img src="../static/images/about.jpg" alt="">
+        </div>
+
+        <div class="content">
+            <h3 class="title">We are a group of stylists</h3>
+            <p>Welcome to Hair Dresser Salon, where we transform hair into stunning works of art, making each strand an expression of beauty and individuality. At Hair Dresser, we believe that every person is unique, and so should their hair be. </p>
+            <p>Our team of skilled and passionate stylists is dedicated to bringing out the best in your hair, enhancing its natural beauty and creating a look that is as unique as you are. We understand that your hair is a reflection of your personality, and we strive to make it as beautiful and distinctive as you envision.</p>
+
+            <div class="icons-container">
+                <div class="icons">
+                   <img src="../static/images/about-icon-1.png" alt="">
+                   <h3>Professional tools</h3>
+                </div>
+                <div class="icons">
+                   <img src="../static/images/about-icon-2.png" alt="">
+                   <h3>quality products</h3>
+                </div>
+                <div class="icons">
+                   <img src="../static/images/about-icon-3.png" alt="">
+                   <h3>hair washing</h3>
+                </div>
+             </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about us end -->
+
+<!-- services -->
+
+<section class="services" id="services">
+
+    <h1 class="heading">premium services</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../static/images/services-1.jpg" alt="">
+            <div class="content">
+                <h3>Hair styling</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../static/images/services-2.jpg" alt="">
+            <div class="content">
+                <h3>wedding service </h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../static/images/services-3.jpg" alt="">
+            <div class="content">
+                <h3>manly haircut</h3>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../static/images/services-4.jpg" alt="">
+            <div class="content">
+                <h3>beard trimming</h3>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services end -->
+
+<!-- styles -->
+
+<section class="styles" id="styles">
+
+    <h1 class="heading">choose your styles</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="../static/images/style-1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">Wedding hairstyle</h3>
+                <p>Indulge in the luxury of exquisite bridal beauty. Our wedding hairstyle services are meticulously crafted to make your special day even more unforgettable.</p>
+            </div>
+         </div>
+
+         <div class="box">
+            <div class="image">
+                <img src="../static/images/style-2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">evening hairstyle</h3>
+                <p>Elevate your evening with a touch of glamour. Our Evening Hairstyle services are crafted to make you stand out and shine as the star of any event.</p>
+            </div>
+         </div>
+
+         <div class="box">
+            <div class="image">
+                <img src="../static/images/style-3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3 class="title">party hairstyle</h3>
+                <p>Elevate your party look with the perfect hairstyle. Our expert stylists are here to turn heads and make you the star of any event with our exquisite party hairstyles.</p>
+            </div>
+         </div>
+
+         <div class="box">
+             <div class="image">
+                 <img src="../static/images/style-4.jpg" alt="">
+             </div>
+             <div class="content">
+                 <h3 class="title">Business hairstyle</h3>
+                 <p>Hairstyle services are designed to help you make a strong and confident statement in your professional life.</p>
+
+             </div>
+         </div>
+
+    </div>
+
+</section>
+
+<!-- styles end-->
+
+
+<!-- pricing -->
+
+<section class="pricing" id="pricing">
+
+    <h1 class="heading">offer and Pricing</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+          <h3 class="title">basic</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">10</span>
+          </div>
+          <ul>
+            <li> <i class="fas fa-check"></i> Simple Haircut </li>
+            <li> <i class="fas fa-check"></i> Hair Plugs </li>
+            <li> <i class="fas fa-check"></i> Styling</li>
+            <li> <i class="fas fa-check"></i> Braiding</li>
+          </ul>
+
+        </div>
+
+        <div class="box">
+          <h3 class="title">standard</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">20</span>
+          </div>
+          <ul>
+            <li> <i class="fas fa-check"></i> Styling</li>
+            <li> <i class="fas fa-check"></i> Simple Haircut </li>
+            <li> <i class="fas fa-check"></i> Color Correction</li>
+            <li> <i class="fas fa-check"></i> Perms</li>
+          </ul>
+
+        </div>
+
+        <div class="box">
+          <h3 class="title">premium</h3>
+          <div class="price">
+            <span class="currency">$</span>
+            <span class="amount">30</span>
+          </div>
+          <ul>
+            <li> <i class="fas fa-check"></i>Perms </li>
+            <li> <i class="fas fa-check"></i>Extensions </li>
+            <li> <i class="fas fa-check"></i>Styling </li>
+            <li> <i class="fas fa-check"></i>Braiding</li>
+          </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- pricing end -->
+
+
+<!-- blog -->
+
+<section class="blogs" id="blog">
+
+    <h1 class="heading"> our blogs </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <div class="image">
+                <img src="../static/images/blog1.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Styling hair service</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>At Hair Dresser, our Styling Hair Service is more than just a cut and dry – it's a transformative experience that leaves you looking and feeling your absolute best. Our team of skilled and creative stylists is dedicated to delivering top-notch styling services tailored to your unique preferences, lifestyle, and personal flair.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="../static/images/blog2.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Styling hair service</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>Our experienced stylists possess an innate understanding of the art of hairstyling. They stay abreast of the latest trends, techniques, and innovations in the world of hair fashion. When you entrust your locks to us, you're in the capable hands of professionals who view hairstyling as a form of artistry.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="../static/images/blog3.jpg" alt="">
+            </div>
+            <div class="content">
+                <a href="#" class="title">Styling hair service</a>
+                <span>by admin / 19th july, 2021</span>
+                <p>From sleek and sophisticated to voluminous and bold, our styling services cover a broad spectrum of styles. Whether you're preparing for a special event, a night out on the town, or simply want to refresh your everyday look, we've got you covered. Our stylists excel in creating everything from intricate updos to effortlessly chic beach waves.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- blog end-->
+
+
+<!-- reviews -->
+
+<section class="review" id="review">
+
+    <h1 class="heading">Customer's Review</h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <img src="../static/images/quote-img.png" alt="" class="quote">
+            <p>I'm just thrilled with my new haircut, it looks great. The second day I receive a lot of compliments from acquaintances and completely strangers.</p>
+            <img src="../static/images/review-1.png" class="user" alt="">
+            <h3>derek rude</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../static/images/quote-img.png" alt="" class="quote">
+            <p>I always feel comfortable when I come to your salon, because I know that I will get a great result.</p>
+            <img src="../static/images/review-2.png" class="user" alt="">
+            <h3>jenny white</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="../static/images/quote-img.png" alt="" class="quote">
+            <p>I am very happy with my new hairstyle. It's all thanks to your skill! I thank you and recommend you with full confidence to all my friends.</p>
+            <img src="../static/images/review-3.png" class="user" alt="">
+            <h3>kate mudton</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- reviews end -->
+
+<!-- footer -->
+
+<section class="footer">
+
+    <div class="box-container">
+       <div class="box">
+           <h3>find us here</h3>
+           <p></p>
+          <div class="share">
+            <p>inst: @hair_dresser.salon</p>
+          <p>facebook: HairDresser.salon</p>
+          </div>
+       </div>
+
+       <div class="box">
+          <h3>contact us</h3>
+          <p>+7 707 122 46 78</p>
+          <p>HairDresser_salon@mail.ru</p>
+       </div>
+
+       <div class="box">
+          <h3>localization</h3>
+          <p>Astana <br>
+            Hair Dresser Salon <br>
+            Mangilik El 55</p>
+       </div>
+
+    </div>
+
+ </section>
+
+<!-- footer end-->
+<script src="js/script.js"></script>
+<script>
+    // Получаем элемент уведомления
+    var alertBox = document.querySelector('.alert');
+
+    // Функция для скрытия уведомления через указанное время (в данном случае 3 секунды = 3000 миллисекунд)
+    function hideAlert() {
+        alertBox.style.display = 'none';
+    }
+
+    // Через 3000 миллисекунд (3 секунды) вызываем функцию hideAlert
+    setTimeout(hideAlert, 3000);
+</script>
+</body>
+</html>

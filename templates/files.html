@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Add Post{% endblock %}
+
+{% block content %}
+<html>
+<head>
+    <title>Files</title>
+</head>
+<body>
+    <h1>Files</h1>
+    <form method="POST">
+        <ul>
+            {% for file in files %}
+                <li>
+                    <a href="{{ url_for('download', filename=file) }}">{{ file }}</a>
+                    <button type="submit" name="delete" value="{{ file }}">Delete</button>
+                </li>
+            {% endfor %}
+        </ul>
+    </form>
+    <a href="{{ url_for('upload') }}">Submit new files</a>
+</body>
+</html>
+
+
+{% endblock %}

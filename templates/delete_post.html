@@ -1,0 +1,15 @@
+{% extends 'bases.html' %}
+
+{% block title %}
+Delete Post
+{% endblock %}
+
+{% block body %}
+    <h2>Are you sure you want to delete this post?</h2>
+    <p>Title: {{ post.title }}</p>
+    <p>Content: {{ post.content }}</p>
+
+    <form method="POST">
+        <button type="submit">Yes, delete</button>
+    </form>
+{% endblock %}
